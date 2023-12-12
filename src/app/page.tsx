@@ -1,113 +1,380 @@
-import Image from 'next/image'
+import Heading from "@/components/Heading";
+import Timeline from "@/components/Timeline";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { AtSign, Linkedin, Layers3, Globe } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+
+import jsIcon from "@/assets/javascripticon.svg";
+import tsIcon from "@/assets/typescripticon.svg";
+import htmlIcon from "@/assets/htmlicon.svg";
+import cssIcon from "@/assets/cssicon.svg";
+import sassIcon from "@/assets/sassicon.svg";
+import reactIcon from "@/assets/reacticon.svg";
+import reduxIcon from "@/assets/reduxicon.svg";
+import nextIcon from "@/assets/nextjsicon.png";
+import nodeIcon from "@/assets/nodejsicon.svg";
+import expressIcon from "@/assets/expressicon.png";
+import nestIcon from "@/assets/nestjsicon.svg";
+import prismaIcon from "@/assets/prismaicon.svg";
+import sequelizeIcon from "@/assets/sequelizeicon.svg";
+import mysqlIcon from "@/assets/mysqlicon.svg";
+import mongoIcon from "@/assets/mongodbicon.svg";
+import mssqlsIcon from "@/assets/mssqlserver.png";
+import tailwindcss from "@/assets/tailwindcss.svg";
+import redisIcon from "@/assets/redisicon.png";
+import kafkaIcon from "@/assets/kafka.svg";
+import esIcon from "@/assets/elasticsearch.svg";
 
 export default function Home() {
+  const workExperiences = [
+    {
+      heading: {
+        title: "IQVIA",
+        extra: <Badge variant={"secondary"}>Software Developer 2</Badge>,
+      },
+      subHeading: "September 2022 - Now",
+      content: `Get access to over 20+ pages including a dashboard layout,
+          charts, kanban board, calendar, and pre-order E-commerce &
+          Marketing pages.`,
+    },
+    {
+      heading: {
+        title: "Nouveau-Labs Private Limited",
+        extra: <Badge variant={"secondary"}>Senior Software Engineer</Badge>,
+      },
+      subHeading: "July 2020 - September 2022",
+      content: `Get access to over 20+ pages including a dashboard layout,
+          charts, kanban board, calendar, and pre-order E-commerce &
+          Marketing pages.`,
+    },
+    {
+      heading: {
+        title: "Flipkart (Nouveau-Labs Private Limited)",
+        extra: <Badge variant={"secondary"}>Consultant UI Developer</Badge>,
+      },
+      subHeading: "March 2018 - July 2020",
+      content: `Get access to over 20+ pages including a dashboard layout,
+          charts, kanban board, calendar, and pre-order E-commerce &
+          Marketing pages.`,
+    },
+    {
+      heading: {
+        title: "Altimetrik Private Limited",
+        extra: <Badge variant={"secondary"}>Associate Developer</Badge>,
+      },
+      subHeading: "May 2016 - March 2018",
+      content: `Get access to over 20+ pages including a dashboard layout,
+          charts, kanban board, calendar, and pre-order E-commerce &
+          Marketing pages.`,
+    },
+  ];
+  const edicationDetails = [
+    {
+      heading: {
+        title: "Siliguri Institute of Technology (MAKAUT)",
+        extra: (
+          <Badge variant={"secondary"}>
+            Bachelor of Technology in Computer Science & Engineering
+          </Badge>
+        ),
+      },
+      subHeading: "2012-2016",
+      content: `Get access to over 20+ pages including a dashboard layout,
+        charts, kanban board, calendar, and pre-order E-commerce &
+        Marketing pages.`,
+    },
+    {
+      heading: {
+        title: "Bankura Kenduadihi High School (WBBHSE)",
+        extra: <Badge variant={"secondary"}>Higher Secondary (10+)</Badge>,
+      },
+      subHeading: "2010-2012",
+      content: `Get access to over 20+ pages including a dashboard layout,
+        charts, kanban board, calendar, and pre-order E-commerce &
+        Marketing pages.`,
+    },
+    {
+      heading: {
+        title: "Bankura Zilla School",
+        extra: <Badge variant={"secondary"}>Secondary</Badge>,
+      },
+      subHeading: "2001-2010",
+      content: `Get access to over 20+ pages including a dashboard layout,
+        charts, kanban board, calendar, and pre-order E-commerce &
+        Marketing pages.`,
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section id="brief" className="mt-36">
+        <div className="container grid grid-cols-2">
+          <div>
+            <div>
+              <h1 className="text-6xl hyphens-auto tracking-wide text-primary">
+                Hey there, I&apos;m Subhadip developer & mentor
+              </h1>
+              <p className="text-lg mt-8 text-gray-400 tracking-wide">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry&apos;s standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It
+                has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing.
+              </p>
+            </div>
+            <div className="mt-12">
+              <div>
+                <a
+                  className="uppercase inline-flex items-end gap-2 text-sm font-bold tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+                  href="https://www.linkedin.com/in/subhadip-majumder-939b2bb5"
+                >
+                  <AtSign size={"18px"} /> majumdersubhadip.sm@gmail.com
+                </a>
+              </div>
+              <div className="mt-3">
+                <a
+                  className="inline-flex items-end gap-2 text-sm font-bold tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+                  href="https://www.linkedin.com/in/subhadip-majumder-939b2bb5"
+                >
+                  <Linkedin size={"18px"} /> LinkedIn
+                </a>
+              </div>
+            </div>
+            <div className="mt-8">
+              <Button variant={"outline"}>Download Resume</Button>
+            </div>
+          </div>
+          <div>{/* <Image src={} /> */}</div>
         </div>
-      </div>
+      </section>
+      <section id="work" className="mt-36">
+        <div className="container">
+          <Heading title="My Work" extra="more" />
+          somecard
+        </div>
+      </section>
+      <section id="skills" className="mt-36">
+        <div className="container">
+          <Heading title="My Skills" />
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Area of Experties</CardTitle>
+                <CardDescription>
+                  Programming/Markup Languages & Stacks
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Javascript</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={tsIcon} height={25} alt="tsicon" />
+                  <div>Typescript</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={htmlIcon} height={25} alt="htmlicon" />
+                  <div>HTML</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={cssIcon} height={25} alt="cssicon" />
+                  <div>CSS</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={sassIcon} height={25} alt="sassicon" />
+                  <div>SASS</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Layers3 size={"25px"} />
+                  <div>MERN Stack</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Globe size={"25px"} />
+                  <div>Web Development</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Frontend</CardTitle>
+                <CardDescription>Libraries & Frameworks</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center">
+                  <Image src={reactIcon} height={25} alt="reacticon" />
+                  <div>React</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={reduxIcon} height={25} alt="reduxicon" />
+                  <div>Redux</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={nextIcon} height={25} alt="nextjsicon" />
+                  <div>Next.js</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={tailwindcss} height={25} alt="tailwindcssicon" />
+                  <div>Tailwind CSS</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Backend</CardTitle>
+                <CardDescription>
+                  Technology, Frameworks & Libraries
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center">
+                  <Image src={nodeIcon} height={25} alt="nodejsicon" />
+                  <div>Node.js</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={expressIcon} height={25} alt="expressicon" />
+                  <div>ExpressJs</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={nestIcon} height={25} alt="nestjsicon" />
+                  <div>NestJs</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={prismaIcon} height={25} alt="prismaicon" />
+                  <div>Prisma</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={sequelizeIcon} height={25} alt="sequelizeicon" />
+                  <div>Sequelize</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Database & Caching</CardTitle>
+                <CardDescription>Backbone of our applications</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center">
+                  <Image src={mysqlIcon} height={25} alt="mysqlicon" />
+                  <div>MySQL</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={mssqlsIcon} height={25} alt="mssqlicon" />
+                  <div>Microsoft SQL Server</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={mongoIcon} height={25} alt="mongoicon" />
+                  <div>MongoDB</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={redisIcon} height={25} alt="redisicon" />
+                  <div>Redis</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={kafkaIcon} height={25} alt="kafkaicon" />
+                  <div>Kafka</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={esIcon} height={25} alt="esicon" />
+                  <div>Elastic Search</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Devops & tools</CardTitle>
+                <CardDescription>Tools & services</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Docker</div>
+                </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Jenkins</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Git</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Cloud Platforms</CardTitle>
+                <CardDescription>
+                  Cloud platform and services that I use.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Firebase</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Google Cloud Paltform</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Secondary Skills</CardTitle>
+                <CardDescription>
+                  I can also wokk with these to some extent :P
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Python</div>
+                </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>.NET with C#</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
+                  <Image src={jsIcon} height={25} alt="jsicon" />
+                  <div>Java</div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      <section id="experiences" className="mt-36">
+        <div className="container">
+          <Heading title="My Experiences" />
+          <Timeline data={workExperiences} />
+        </div>
+      </section>
+      <section id="education" className="mt-36">
+        <div className="container">
+          <Heading title="My Education" />
+          <Timeline data={edicationDetails} />
+        </div>
+      </section>
+      <section id="blogs" className="mt-36">
+        <div className="container">
+          <Heading title="My Blogs" />
+        </div>
+      </section>
     </main>
-  )
+  );
 }
