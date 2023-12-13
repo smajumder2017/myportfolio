@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -22,7 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <SpeedInsights />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased dark",
@@ -31,6 +31,8 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
