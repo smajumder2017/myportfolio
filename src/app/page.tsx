@@ -1,5 +1,5 @@
-import Heading from "@/components/Heading";
-import Timeline from "@/components/Timeline";
+import Heading from "@/components/ui/heading";
+import Timeline from "@/components/ui/timeline";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AtSign, Linkedin, Layers3, Globe } from "lucide-react";
@@ -7,11 +7,11 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import MyWorks from "@/components/mywork";
 
 import jsIcon from "@/assets/javascripticon.svg";
 import tsIcon from "@/assets/typescripticon.svg";
@@ -33,6 +33,7 @@ import tailwindcss from "@/assets/tailwindcss.svg";
 import redisIcon from "@/assets/redisicon.png";
 import kafkaIcon from "@/assets/kafka.svg";
 import esIcon from "@/assets/elasticsearch.svg";
+import gqlIcon from "@/assets/graphql.svg";
 
 export default function Home() {
   const workExperiences = [
@@ -162,7 +163,7 @@ export default function Home() {
       <section id="work" className="mt-36">
         <div className="container">
           <Heading title="My Work" extra="more" />
-          somecard
+          <MyWorks />
         </div>
       </section>
       <section id="skills" className="mt-36">
@@ -252,6 +253,10 @@ export default function Home() {
                   <div>NestJs</div>
                 </div>
                 <div className="flex gap-2 items-center mt-4">
+                  <Image src={gqlIcon} height={25} alt="gqlicon" />
+                  <div>GraphQL</div>
+                </div>
+                <div className="flex gap-2 items-center mt-4">
                   <Image src={prismaIcon} height={25} alt="prismaicon" />
                   <div>Prisma</div>
                 </div>
@@ -336,7 +341,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle>Secondary Skills</CardTitle>
                 <CardDescription>
-                  I can also wokk with these to some extent :P
+                  I can also work with these to some extent :P
                 </CardDescription>
               </CardHeader>
               <CardContent>
