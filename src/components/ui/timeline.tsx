@@ -28,7 +28,7 @@ const Timeline: React.FC<ITimeline> = (props) => {
               <Heading
                 title={item.heading.title}
                 size="lg"
-                containerClass="mb-1 ml-8 items-center"
+                containerClass="mb-4 md:mb-1 ml-8 items-center"
                 extra={
                   item.heading.extra || (
                     <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">

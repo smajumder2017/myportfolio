@@ -14,7 +14,12 @@ const Heading: React.FC<IHeading> = (props) => {
       : `text-[${props.size}]`
     : "text-4xl";
   return (
-    <div className={cn("flex gap-4 items-end mb-8", props.containerClass)}>
+    <div
+      className={cn(
+        "flex flex-wrap gap-2 md:gap-4 items-end mb-8",
+        props.containerClass
+      )}
+    >
       <h3 className={cn(textSizeClass, `tracking-wide text-primary`)}>
         {props.title}
       </h3>

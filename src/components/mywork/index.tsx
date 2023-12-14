@@ -21,6 +21,7 @@ const Link = (props: {
     <a
       className="tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
       href={props.href}
+      target="_blank"
     >
       {props.children}
     </a>
@@ -92,6 +93,7 @@ const MyWorks = async () => {
                     <a
                       className="tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
                       href={repo.html_url}
+                      target="_blank"
                     >
                       {repo.name}
                     </a>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -10,6 +10,13 @@ const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "gray" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a1929" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Subhadip Majumder",

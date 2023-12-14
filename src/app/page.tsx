@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Heading from "@/components/ui/heading";
 import Timeline from "@/components/ui/timeline";
 import { Button } from "@/components/ui/button";
-import { AtSign, Linkedin } from "lucide-react";
+import { AtSign, DownloadCloud, Linkedin } from "lucide-react";
 import MyWorks from "@/components/mywork";
 import Skills from "@/components/skills";
 
@@ -9,17 +10,19 @@ import { skills } from "@/data/skills";
 import { workExperiences } from "@/data/experience";
 import { edicationDetails } from "@/data/education";
 
+import avatar from "@/assets/avatar.svg";
+
 export default function Home() {
   return (
     <main>
-      <section id="brief" className="mt-36">
-        <div className="container grid grid-cols-2">
+      <section id="brief" className="mt-8 md:mt-36">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <div>
-              <h1 className="text-6xl hyphens-auto tracking-wide text-primary">
+              <h1 className="text-center md:text-left text-4xl md:text-6xl hyphens-auto tracking-wide text-primary">
                 Hey there, I&apos;m Subhadip developer & mentor
               </h1>
-              <p className="text-lg mt-8 text-gray-400 tracking-wide">
+              <p className="text-center md:text-left text-base md:text-lg mt-8 text-gray-400 tracking-wide">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry&apos;s standard
                 dummy text ever since the 1500s, when an unknown printer took a
@@ -50,21 +53,32 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8">
-              <Button variant={"outline"}>Download Resume</Button>
+              <Button variant={"outline"}>
+                <DownloadCloud className="mr-2 h-4 w-4" /> Download Resume
+              </Button>
             </div>
           </div>
-          <div>{/* <Image src={} /> */}</div>
+          <div className="order-[-1] md:order-1 flex items-start justify-center">
+            <Image src={avatar} height={500} alt="avatar" />
+          </div>
         </div>
       </section>
-      <section id="work" className="mt-36">
+      <section id="work" className="mt-16 md:mt-36">
         <div className="container">
-          <Heading title="My Work" extra="more" />
+          <Heading
+            title="My Work"
+            extra="more"
+            containerClass="flex justify-center md:justify-start"
+          />
           <MyWorks />
         </div>
       </section>
-      <section id="skills" className="mt-36">
+      <section id="skills" className="mt-16 md:mt-36">
         <div className="container">
-          <Heading title="My Skills" />
+          <Heading
+            title="My Skills"
+            containerClass="flex justify-center md:justify-start"
+          />
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {skills.map((skillSet) => {
               return (
@@ -79,19 +93,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="experiences" className="mt-36">
+      <section id="experiences" className="mt-16 md:mt-36">
         <div className="container">
-          <Heading title="My Experiences" />
+          <Heading
+            title="My Experiences"
+            containerClass="flex justify-center md:justify-start md:mb-9"
+          />
           <Timeline data={workExperiences} />
         </div>
       </section>
-      <section id="education" className="mt-36">
+      <section id="education" className="mt-16 md:mt-36">
         <div className="container">
-          <Heading title="My Education" />
+          <Heading
+            title="My Education"
+            containerClass="flex justify-center md:justify-start md:mb-9"
+          />
           <Timeline data={edicationDetails} />
         </div>
       </section>
-      <section id="blogs" className="mt-36">
+      <section id="blogs" className="mt-16 md:mt-36 mb-20">
         <div className="container">
           <Heading title="My Blogs" />
         </div>
