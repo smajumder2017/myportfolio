@@ -2,11 +2,13 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 interface INavLink {
   href: string;
   className?: string;
   children?: ReactNode;
+  active?: boolean;
 }
 const NavLink: React.FC<INavLink> = (props) => {
   const scrolltoHash = (element_id: string | null) => {
@@ -29,12 +31,17 @@ const NavLink: React.FC<INavLink> = (props) => {
   };
 
   const id = props.href.includes("#") ? props.href.split("#")[1] : null;
+  const activeClass = props.active ? "after:w-full text-primary" : "";
+  console.log(id, props.active);
   return (
     <Link
       href={props.href}
       scroll={false}
       onClick={() => scrolltoHash(id)}
-      className="text-[15px] font-bold tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+      className={cn(
+        "text-[15px] font-bold tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer",
+        activeClass
+      )}
     >
       {props.children}
     </Link>
@@ -42,7 +49,9 @@ const NavLink: React.FC<INavLink> = (props) => {
 };
 
 const Navbar = () => {
+  const params = useParams();
   const [scrolled, setScrolled] = useState(false);
+  const [id, setId] = useState("");
 
   useEffect(() => {
     window.onscroll = function () {
@@ -59,6 +68,10 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setId(window.location.href.split("#")[1]);
+  }, [params]);
+
   return (
     <nav
       id="navbar"
@@ -70,10 +83,18 @@ const Navbar = () => {
     >
       <div className="flex-1">Logo</div>
       <div className="sm:invisible md:visible space-x-4 lg:space-x-10 text-gray-400 uppercase">
-        <NavLink href="#work">Work</NavLink>
-        <NavLink href="#skills">Skills</NavLink>
-        <NavLink href="#experiences">Experience</NavLink>
-        <NavLink href="#blogs">Blogs</NavLink>
+        <NavLink href="#work" active={id === "work"}>
+          Work
+        </NavLink>
+        <NavLink href="#skills" active={id === "skills"}>
+          Skills
+        </NavLink>
+        <NavLink href="#experiences" active={id === "experiences"}>
+          Experience
+        </NavLink>
+        <NavLink href="#blogs" active={id === "blogs"}>
+          Blogs
+        </NavLink>
         <Link
           href="/examples/dashboard"
           className="text-[12px] font-light tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
