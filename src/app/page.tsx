@@ -23,15 +23,16 @@ export default function Home() {
                 Hey there, I&apos;m Subhadip developer & mentor
               </h1>
               <p className="text-center md:text-left text-base md:text-lg mt-8 text-gray-400 tracking-wide">
-                Working as fullstack javascript developer, I love to build
-                projects from sratch in other hand working with someone elses
-                code give me pleasure to understand the mindset of the developer
-                and learn new things. I often travel at my free time, trying
-                some new delicacies and making some over the weekend give my
-                tastebuds imnense pleasure. A huge FIFA fan sometime in the late
-                night you can find me over the couch enjoying with my
-                playstation and yes I also mentor freshers and professionals to
-                get better at fullstack javascript.
+                I work as a full-stack JavaScript developer and find joy in
+                building projects from scratch. Additionally, delving into
+                someone else&apos;s code gives me pleasure as it helps me
+                understand different mindsets and learn new things. During my
+                free time, I love to travel, explore new delicacies, and indulge
+                my taste buds in culinary pleasures over the weekends. A
+                passionate FIFA fan, you might find me enjoying late-night
+                sessions on the couch with my PlayStation. I also take pleasure
+                in mentoring both freshers and professionals to help them
+                improve in the realm of full-stack JavaScript development.
               </p>
             </div>
             <div className="mt-12">

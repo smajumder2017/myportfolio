@@ -7,7 +7,7 @@ export const workExperiences = [
       extra: <Badge variant={"secondary"}>Software Developer 2</Badge>,
     },
     subHeading: "September 2022 - Now",
-    content: `Working as fullstack developer here, comminication with BA and stakeholders to understand the requirement and turn them into reality through the sprints is my bread and butter.`,
+    content: `Working as a full-stack developer here, communicating with business analysts and stakeholders to understand requirements and turn them into reality through sprints is my bread and butter.`,
   },
   {
     heading: {
@@ -15,7 +15,7 @@ export const workExperiences = [
       extra: <Badge variant={"secondary"}>Senior Software Engineer</Badge>,
     },
     subHeading: "December 2020 - September 2022",
-    content: `Here I have worked as a Frontend Lead for one Product within the timespan of 1 years, then worked as a backend develepoer with a client Menlo Security. Predominently I have worked on React, React Native, Electron ad Node.js`,
+    content: `Here I have worked as a Frontend Lead for one product within the time span of one year, then worked as a backend developer with a client, Menlo Security. Predominently, I have worked on React, React Native, Electron, and Node.js.`,
   },
   {
     heading: {
@@ -23,7 +23,7 @@ export const workExperiences = [
       extra: <Badge variant={"secondary"}>Consultant UI Developer</Badge>,
     },
     subHeading: "May 2018 - December 2020",
-    content: `Worked as a Consultant UI developer with Warehouse Management Team(WMS), here I'm taking care of a React PWA application which is the driving factor in the warehouse management process, the app is used in all warehouses in flipkart.`,
+    content: `I worked as a UI developer consultant with the Warehouse Management Team (WMS). In this role, I actively contributed to a React Progressive Web App (PWA) that played a crucial role in the warehouse management process. This application was utilized in all warehouses at Flipkart.`,
   },
   {
     heading: {
@@ -31,6 +31,6 @@ export const workExperiences = [
       extra: <Badge variant={"secondary"}>Associate Developer</Badge>,
     },
     subHeading: "May 2016 - March 2018",
-    content: `I started my journey here and worked on various project in different domain like Data Analytics, Banking, Accounting, Satrted with a frontend project with Angular and JQuery then learned react and done 2 projects on it, later learned Node.js worked with client Intuit and worked on some internal projects.`,
+    content: ` began my journey here and engaged in diverse projects across various domains, including data analytics, banking, and accounting. Additionally, I contributed to a frontend project utilizing Angular and JQuery. After acquiring proficiency in React, I successfully completed two projects. Subsequently, I expanded my skill set to include Node.js and collaborated with the client Intuit on several internal projects.`,
   },
 ];

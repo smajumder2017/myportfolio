@@ -19,7 +19,7 @@ export const edicationDetails = [
       extra: <Badge variant={"secondary"}>Higher Secondary (10+)</Badge>,
     },
     subHeading: "2010-2012",
-    content: `Completed my degree with 75%, here my core subjects were Physics, Chemistry, Math and Biology`,
+    content: `Completed my degree with a 75% overall, focusing on core subjects such as Physics, Chemistry, Mathematics, and Biology.`,
   },
   {
     heading: {
@@ -27,6 +27,6 @@ export const edicationDetails = [
       extra: <Badge variant={"secondary"}>Secondary</Badge>,
     },
     subHeading: "2001-2010",
-    content: `Passed with 77.75% marks and completed my general studies`,
+    content: `I passed with a score of 77.75% and successfully completed my general studies.`,
   },
 ];
