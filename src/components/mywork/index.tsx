@@ -67,15 +67,6 @@ const Forks = (props: { value: number }) => {
   );
 };
 
-const DemoLink = (props: { value: string | null }) => {
-  return (
-    <div className="flex gap-2">
-      <UrlLink size={"15px"} />
-      <div className="text-sm text-gray-500">{props.value}</div>
-    </div>
-  );
-};
-
 const MyWorks = async () => {
   const githubService = new GithubService("smajumder2017");
   const repos = await githubService.getRepos("public", 0, 8);

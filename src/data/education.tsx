@@ -11,9 +11,7 @@ export const edicationDetails = [
       ),
     },
     subHeading: "2012-2016",
-    content: `Get access to over 20+ pages including a dashboard layout,
-      charts, kanban board, calendar, and pre-order E-commerce &
-      Marketing pages.`,
+    content: `Completed my degree with 8.30 DGPA, participated in college football team as a goalkeeper, built multiple projects throughout my college life, also I was the class representative`,
   },
   {
     heading: {
@@ -21,9 +19,7 @@ export const edicationDetails = [
       extra: <Badge variant={"secondary"}>Higher Secondary (10+)</Badge>,
     },
     subHeading: "2010-2012",
-    content: `Get access to over 20+ pages including a dashboard layout,
-      charts, kanban board, calendar, and pre-order E-commerce &
-      Marketing pages.`,
+    content: `Completed my degree with 75%, here my core subjects were Physics, Chemistry, Math and Biology`,
   },
   {
     heading: {
@@ -31,8 +27,6 @@ export const edicationDetails = [
       extra: <Badge variant={"secondary"}>Secondary</Badge>,
     },
     subHeading: "2001-2010",
-    content: `Get access to over 20+ pages including a dashboard layout,
-      charts, kanban board, calendar, and pre-order E-commerce &
-      Marketing pages.`,
+    content: `Passed with 77.75% marks and completed my general studies`,
   },
 ];

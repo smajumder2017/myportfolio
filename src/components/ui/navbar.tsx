@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { Button } from "./button";
-import { Menu } from "lucide-react";
+import smajumder from "@/assets/subhadipmajumder.png";
+import Image from "next/image";
 
 interface INavLink {
   href: string;
@@ -34,7 +34,7 @@ const NavLink: React.FC<INavLink> = (props) => {
 
   const id = props.href.includes("#") ? props.href.split("#")[1] : null;
   const activeClass = props.active ? "after:w-full text-primary" : "";
-  console.log(id, props.active);
+
   return (
     <Link
       href={props.href}
@@ -88,7 +88,11 @@ const Navbar = () => {
         <Menu size={"20px"} />
       </Button> */}
         <div className="flex flex-1 items-center justify-center md:justify-start">
-          <div>Logo</div>
+          <div>
+            <Link href="/">
+              <Image src={smajumder} alt="logo" height={30} />
+            </Link>
+          </div>
           {/* <div className="ml-[-30px] md:ml-0"></div> */}
         </div>
         {/* Desktop Navbar */}
@@ -102,15 +106,15 @@ const Navbar = () => {
           <NavLink href="#experiences" active={id === "experiences"}>
             Experience
           </NavLink>
-          <NavLink href="#blogs" active={id === "blogs"}>
+          {/* <NavLink href="#blogs" active={id === "blogs"}>
             Blogs
-          </NavLink>
-          <Link
+          </NavLink> */}
+          {/* <Link
             href="/examples/dashboard"
             className="text-[12px] font-light tracking-widest leading-[1.1em] transition-colors hover:text-primary relative after:bg-white after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
           >
             Get in touch
-          </Link>
+          </Link> */}
         </div>
       </nav>
       <div className="flex md:hidden px-4 py-6 border-t gap-2 justify-evenly border-gray-800 bg-transparent fixed bottom-0 left-0 right-0 backdrop-filter backdrop-blur-lg z-[9999] uppercase">
@@ -123,9 +127,9 @@ const Navbar = () => {
         <NavLink href="#experiences" active={id === "experiences"}>
           Experience
         </NavLink>
-        <NavLink href="#blogs" active={id === "blogs"}>
+        {/* <NavLink href="#blogs" active={id === "blogs"}>
           Blogs
-        </NavLink>
+        </NavLink> */}
       </div>
     </>
   );

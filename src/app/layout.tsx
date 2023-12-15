@@ -11,13 +11,6 @@ const fontSans = Inter({
   variable: "--font-sans",
 });
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "gray" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a1929" },
-  ],
-};
-
 export const metadata: Metadata = {
   title: "Subhadip Majumder",
   description: "My portfolio website which dispalays my skills and work",
