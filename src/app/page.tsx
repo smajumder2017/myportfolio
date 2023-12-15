@@ -112,11 +112,11 @@ export default function Home() {
           <Timeline data={edicationDetails} />
         </div>
       </section>
-      <section id="blogs" className="mt-16 md:mt-36 mb-20">
+      {/* <section id="blogs" className="mt-16 md:mt-36 mb-20">
         <div className="container">
           <Heading title="My Blogs" />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
