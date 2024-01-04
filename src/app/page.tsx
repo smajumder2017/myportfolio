@@ -112,7 +112,7 @@ export default function Home() {
           <Timeline data={workExperiences} />
         </div>
       </section>
-      <section id="education" className="mt-16 md:mt-36">
+      <section id="education" className="mt-16 md:mt-36 mb-20">
         <div className="container">
           <Heading
             title="My Education"
