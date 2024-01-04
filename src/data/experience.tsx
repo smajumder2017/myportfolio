@@ -31,6 +31,6 @@ export const workExperiences = [
       extra: <Badge variant={"secondary"}>Associate Developer</Badge>,
     },
     subHeading: "May 2016 - March 2018",
-    content: ` began my journey here and engaged in diverse projects across various domains, including data analytics, banking, and accounting. Additionally, I contributed to a frontend project utilizing Angular and JQuery. After acquiring proficiency in React, I successfully completed two projects. Subsequently, I expanded my skill set to include Node.js and collaborated with the client Intuit on several internal projects.`,
+    content: ` began my journey here and engaged in diverse projects across various domains, including data analytics, banking, and accounting. Additionally, I contributed to a frontend project utilizing Angular and JQuery. After acquiring proficiency in React, I successfully completed two projects. Subsequently, I expanded my skill set to include Node.js and collaborated with the client Intuit, also contributed in several internal projects.`,
   },
 ];

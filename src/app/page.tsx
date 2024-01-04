@@ -11,6 +11,7 @@ import { workExperiences } from "@/data/experience";
 import { edicationDetails } from "@/data/education";
 
 import avatar from "@/assets/avatar.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -55,9 +56,16 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8">
-              <Button variant={"outline"}>
-                <DownloadCloud className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
+              <Link
+                href={
+                  "https://drive.google.com/uc?export=download&id=1LCnUTiAxcIY56AmpWPuo-7QMt_VeBInx"
+                }
+                target="_blank"
+              >
+                <Button variant={"outline"}>
+                  <DownloadCloud className="mr-2 h-4 w-4" /> Download Resume
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="order-[-1] md:order-1 flex items-start justify-center">
